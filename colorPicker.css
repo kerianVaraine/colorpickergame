@@ -1,0 +1,101 @@
+body {
+    background: #343434;
+    margin: 0;
+    font-family: helvetica, sans-serif;
+}
+
+header {
+    padding: 2.5% 2.5% 2.5% 2.5%;
+    background: darkblue;
+    transition: background 0.6s linear;
+}
+
+#nav {
+    color: #002099;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% repeat(3, 1fr) 20%;
+    background: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+#winner {
+    padding: 15% 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+    background: white;
+    font-size: 1.1em;
+    transition: all 0.5s;
+}
+
+#winner {
+    grid-column: 3;
+    cursor: unset;
+}
+
+#reset {
+    grid-column: 2;
+}
+
+button:hover {
+    background: #BBBBBB;
+}
+
+.selectedMode {
+    background: #999999;
+}
+
+#gameMode {
+    grid-column: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+#easy,
+#hard {
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    width: 60%;
+    margin: 5% auto;
+}
+
+.square {
+    background: #ffffff;
+    width: 100%;
+    min-height: 100px;
+    height: 100px;
+    border-radius: 20%;
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
